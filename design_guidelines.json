@@ -1,0 +1,137 @@
+{
+  "project_context": {
+    "domain": "Gaming / AI Simulation",
+    "theme": "dark",
+    "archetype": "Archetype 2: Performance Pro (Tactical Command Center)",
+    "mood": "Cinematic, tactical, high-stakes, futuristic, precise"
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Unbounded",
+      "body": "Outfit",
+      "mono": "JetBrains Mono"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "body": "text-base leading-relaxed",
+      "labels": "text-xs tracking-[0.2em] uppercase font-mono"
+    },
+    "rules": [
+      "NEVER use Inter, Roboto, or generic sans for headings.",
+      "Use JetBrains Mono for system readouts, logs, terminal data, and numeric stats.",
+      "Maintain tight tracking on all headings.",
+      "Left-align text in dashboards and logs; never center-align dense data."
+    ]
+  },
+  "colors": {
+    "background": {
+      "base": "#070707",
+      "surface": "#121212",
+      "panel": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A0A0A0",
+      "muted": "#666666"
+    },
+    "brand": {
+      "primary": "#FFB800",
+      "primary_hover": "#FFD147",
+      "secondary": "#FF3B30",
+      "ally": "#007AFF"
+    },
+    "status": {
+      "success": "#00FF66",
+      "warning": "#FFB800",
+      "critical": "#FF3B30"
+    },
+    "rules": [
+      "No purple-blue gradients. NO teal (#1B93A4) anywhere.",
+      "Use 'Tinted Grey' for surfaces, never pure #808080.",
+      "Primary CTA buttons must be solid #FFB800 with black text for high contrast.",
+      "Layer dark grays to create depth without using heavy drop shadows."
+    ]
+  },
+  "layout_and_spacing": {
+    "strategy": "The Control Room Grid",
+    "grid_classes": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4",
+    "spacing_scale": "Dense and compact for dashboards. Use p-4 or p-6 for panels.",
+    "rules": [
+      "Every pixel must be utilized. Use h-full on grid children.",
+      "Containers must have internal padding.",
+      "Avoid 'Center-Everything Disease'. Tension creates interest through asymmetry."
+    ]
+  },
+  "surfaces": {
+    "style": "Retro-Futurism / Grid Borders",
+    "card": "bg-[#121212] border border-[#2A2A2A] rounded-none md:rounded-sm",
+    "hover_state": "hover:border-[#FFB800]/50 transition-colors duration-200",
+    "header": "bg-[#070707]/90 backdrop-blur-md border-b border-[#2A2A2A]",
+    "rules": [
+      "No glassmorphism for data-heavy areas, use flat solid surfaces.",
+      "Add 1px subtle borders to separate grid items.",
+      "Use sharp edges or max 8px (rounded-sm) border radius."
+    ]
+  },
+  "components_strategy": {
+    "forms_and_inputs": "Shadcn UI heavily customized. Dark backgrounds, sharp borders, focus:ring-1 focus:ring-[#FFB800]",
+    "buttons": "Square edges. Primary: bg-[#FFB800] text-black font-bold. Secondary: border border-[#2A2A2A] text-white hover:bg-[#1A1A1A].",
+    "tables_and_logs": "Dense layout, monospace font for metrics, distinct alternating row colors or border-b.",
+    "live_battle_map": "HTML/CSS Grid or Canvas. Must be dark with glowing nodes/lines. Use tactical abstract grid image as background overlay.",
+    "host_commentary_box": "Terminal-style fixed panel on the right or bottom. JetBrains Mono font. Typewriter effect for incoming text.",
+    "data_testid": "ALL interactive elements MUST include a semantic data-testid (e.g., 'spawn-reinforcements-btn')."
+  },
+  "media_and_assets": {
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "instruction": "Use Phosphor icons with 'duotone' or 'regular' weight for a precise tactical dashboard feel."
+    },
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://static.prod-images.emergentagent.com/jobs/fc7d2cf5-bbe7-4606-b479-896a17c8cb8f/images/e71336823380c7bf8eef107e1fef29ad9d0587c581388bfb6329c5efede7ec4c.png",
+        "description": "Cinematic dark tactical command center for the main landing or setup screen background. Use with a black/60 overlay.",
+        "usage": "Landing page hero background or global app background with heavy opacity fade."
+      },
+      {
+        "category": "base_example_alien",
+        "url": "https://static.prod-images.emergentagent.com/jobs/fc7d2cf5-bbe7-4606-b479-896a17c8cb8f/images/fa31e922b60caf53655160282c17b97d954be70d129f3b9e32e73da83204ab83.png",
+        "description": "Red desert planet military base.",
+        "usage": "Display as an example when selecting planet/alien theme base building."
+      },
+      {
+        "category": "base_example_spartan",
+        "url": "https://static.prod-images.emergentagent.com/jobs/fc7d2cf5-bbe7-4606-b479-896a17c8cb8f/images/62a07a2f85520bfafdab92f272f3df25f7a6037a433f7c2d0085111030b6c9c6.png",
+        "description": "Futuristic Spartan fortress.",
+        "usage": "Display as an example when selecting historical/custom theme base building."
+      },
+      {
+        "category": "tactical_grid_overlay",
+        "url": "https://images.unsplash.com/photo-1714548529197-537c1f0b6aa7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxzY2ktZmklMjB0YWN0aWNhbCUyMGdyaWQlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzkwNTg5NDZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark sci-fi abstract tactical grid.",
+        "usage": "Use as a low-opacity background image for the live battle grid area or stat panels."
+      }
+    ],
+    "rules": [
+      "DO NOT use placeholder URLs. Use ONLY the images provided above.",
+      "Ensure text over images always has a gradient overlay or solid dark container for readability."
+    ]
+  },
+  "motion_and_interaction": {
+    "hover": "Explicitly set hover states for text and backgrounds. E.g., hover:bg-[#1A1A1A] hover:text-[#FFB800].",
+    "live_updates": "When stats change in the simulation, use a quick flash of #FFB800 or #FF3B30 background fading out to #121212.",
+    "panels": "Slide in from edges or simple fade-in. Keep it snappy (150-200ms)."
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: yarn add @phosphor-icons/react framer-motion",
+    "Configure Tailwind for the custom color palette provided in 'colors'.",
+    "Setup JWT Auth structure (login/signup screens) using the dark tactical theme.",
+    "Build the Setup Screen: Allow users to input themes (free text), select resources, and view AI base generated previews.",
+    "Build the Live Battle Dashboard: A dense 3-column layout. Left: AI Commander 1 stats & base. Center: Live battle animated grid (use CSS grid with dynamic glowing nodes). Right: AI Commander 2 stats & base.",
+    "Implement the Host Commentary UI: A fixed terminal window displaying simulated ElevenLabs host dialogue. Include audio controls.",
+    "Implement Intervention Action Bar: A sticky bottom or center-bottom panel with aggressive, tactical buttons for 'Spawn Reinforcements', 'Trigger Weather', etc.",
+    "Create the Battle History list with rich data visualizations."
+  ]
+}
